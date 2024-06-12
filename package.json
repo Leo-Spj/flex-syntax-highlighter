@@ -1,0 +1,26 @@
+{
+  "name": "flex-syntax-highlighter",
+  "displayName": "Resaltador de sintaxis flex",
+  "description": "Resaltado de sintaxis para archivos Flex (.l)",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.90.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "flex",
+      "aliases": ["Flex", "flex"],
+      "extensions": [".l"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "flex",
+      "scopeName": "source.flex",
+      "path": "./syntaxes/flex.tmLanguage.json"
+    }]
+  },
+  "icon": "images/icon.png"
+}
