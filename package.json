@@ -2,7 +2,8 @@
   "name": "flex-syntax-highlighter",
   "displayName": "Resaltador de sintaxis flex",
   "description": "Resaltado de sintaxis para archivos Flex (.l)",
-  "version": "0.0.1",
+  "version": "0.0.2",
+  "publisher": "LeonardoEspejo",
   "engines": {
     "vscode": "^1.90.0"
   },

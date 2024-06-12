@@ -5,7 +5,8 @@
     "patterns": [
         { "include": "#flex-directives" },
         { "include": "#c-code" },
-        { "include": "#flex-rules" }
+        { "include": "#flex-rules" },
+        { "include": "#c-code-main" }
     ],
     "repository": {
         "flex-directives": {
@@ -33,19 +34,27 @@
                 {
                     "name": "meta.section.flex-rules",
                     "begin": "^%%",
-                    "end": "^%%",
+                    "end": "(?=^%%)",
                     "patterns": [
                         { "include": "#flex-pattern-action" }
                     ]
                 }
             ]
         },
-        "flex-pattern-action": {
+        "c-code-main": {
             "patterns": [
                 {
-                    "name": "keyword.control.flex",
-                    "match": "^%%"
-                },
+                    "name": "meta.section.c-code-main",
+                    "begin": "^%%",
+                    "end": "(?=^$)",
+                    "patterns": [
+                        { "include": "source.c" }
+                    ]
+                }
+            ]
+        },
+        "flex-pattern-action": {
+            "patterns": [
                 {
                     "name": "constant.character.flex",
                     "match": "\"[^\"]*\"|'[^']*'"
